@@ -1,0 +1,36 @@
+package DEV;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Random;
+public class mass {
+    public static void main(String[] agrs) {
+        int[][] psih = new int[5][5];
+        for (int i = 0; i < psih.length; i++) {
+            for (int j = 0; j < psih.length; j++) {
+                Random r = new Random();
+                int lowerBound = -50;
+                int upperBound = 51;
+                int result = r.nextInt(upperBound - lowerBound) + lowerBound;
+                psih[i][j] = result;
+                System.out.println(psih[i][j]);
+            }
+        }
+        int large1 = psih[0][0], large2 = psih[0][0], small1 = psih[0][0], small2 = psih[0][0];
+        for(int i =0 ; i < psih.length ; i++) {
+            for(int j = 0 ; j < psih.length ; j++) {
+                if(large1 < psih[i][j] || large2 < psih[i][j]) {
+                    large2 = large1;
+                    large1 = psih[i][j];
+                }
+                if(small1 > psih[i][j] || small2 < psih[i][j]) {
+                    small2 = small1;
+                    small1 = psih[i][j];
+                }
+            }
+        }
+        System.out.println("Первый здоровый :" + large1);
+        System.out.println("Второй здоровый :" + large2);
+        System.out.println("Первый мелкий :" + small1);
+        System.out.println("Второй мелкий :" + small2);
+    }
+}

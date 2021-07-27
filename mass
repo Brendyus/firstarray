@@ -28,9 +28,9 @@ public class mass {
                 }
             }
         }
-        System.out.println("Первый здоровый :" + large1);
-        System.out.println("Второй здоровый :" + large2);
-        System.out.println("Первый мелкий :" + small1);
-        System.out.println("Второй мелкий :" + small2);
+        int summin = small1 + small2;
+        int summax = large1 + large2;
+        System.out.printf("Сумма двух минимальных значений - %s\n", summin);
+        System.out.printf("Сумма двух максимальных значений - %s\n", summax);
     }
 }

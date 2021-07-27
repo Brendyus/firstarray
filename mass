@@ -18,11 +18,11 @@ public class mass {
         int large1 = -51, large2 = -51, small1 = 51, small2 = 51;
         for(int i =0 ; i < psih.length ; i++) {
             for(int j = 0 ; j < psih.length ; j++) {
-                if(large1 < psih[i][j]) {
+                if(large1 < psih[i][j] || large2 < psih[i][j]) {
                     large2 = large1;
                     large1 = psih[i][j];
                 }
-                if(small1 > psih[i][j]) {
+                if(small1 > psih[i][j] || small2 > psih[i][j]) {
                     small2 = small1;
                     small1 = psih[i][j];
                 }

@@ -1,8 +1,6 @@
-package DEV;
-import java.lang.reflect.Array;
-import java.util.Arrays;
 import java.util.Random;
-public class mass {
+
+public class Mass {
     static int small1;
     static int small2;
     static int large1;
@@ -11,7 +9,6 @@ public class mass {
     static int min2;
     static int max1;
     static int max2;
-
 
     public static void main(String[] argrs) {
         int[][] fullarray = new int[5][5];
